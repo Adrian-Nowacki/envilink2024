@@ -10,7 +10,7 @@
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <meta name="author" content="Adrian Nowacki">
+  <meta name="author" content="Adrian Nowacki, Jakub Nowosad">
   <meta name="author" content="Uniwersytet im. Adama Mickiewicza w Poznaniu">
   <title>Zmiany złożoności przestrzennej obszarów leśnych na świecie w latach 1992-2020</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -333,7 +333,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Adrian Nowacki 
+Adrian Nowacki, Jakub Nowosad 
 </div>
 </div>
 <div class="quarto-title-author">
@@ -347,282 +347,382 @@ Uniwersytet im. Adama Mickiewicza w Poznaniu
 </section>
 <section id="wprowadzenie" class="slide level2">
 <h2>Wprowadzenie</h2>
-<!--
-::: columns
-::: {.column .tabela_zrodla width="33%" style="font-size:60%;"}
--   Podstawowym zastosowaniem metod cyfrowej klasyfikacji zdjęć satelitarnych są **mapy pokrycia terenu i użytkowania ziemi**
-
-</br>
-
--   Źródła pokrycia terenu i użytkowania ziemi pozwalają na wszelkie analizy krajobrazowe oraz monitoring zmian zachodzących na powierzchni terenu
-
-</br>
-
--   Porównanie dokładności źródeł pokrycia terenu i użytkowania ziemi może zostać wzięte pod uwagę przy wyborze najbardziej użytecznego zbioru danych na poziomie lokalnym
-:::
-
-::: {.column .wykres_60 style="font-size:65%;margin-left:50px!important;"}
-Obszar badań ![](ryciny/mapy/obszar_badan.png){fig-align="center"}
-:::
-:::
--->
-</section>
-<section id="źródła-danych" class="slide level2">
-<h2>Źródła danych</h2>
-<!--
-::: columns
-::: {.column .tabela_zrodla width="33%" style="font-size:60%;"}
--   Podstawowym zastosowaniem metod cyfrowej klasyfikacji zdjęć satelitarnych są **mapy pokrycia terenu i użytkowania ziemi**
-
-</br>
-
--   Rozdzielczość przestrzenna na poziomie 10 sekund kątowych (ok. 300 metrów na równiku)
-
-</br>
-
--   Porównanie dokładności źródeł pokrycia terenu i użytkowania ziemi może zostać wzięte pod uwagę przy wyborze najbardziej użytecznego zbioru danych na poziomie lokalnym
-:::
-
-::: {.column .wykres_60 style="font-size:65%;margin-left:50px!important;"}
-ESA CCI-LC ![](ryciny/metody/equi7grid2.png){fig-align="center"}
-:::
-:::
-
--->
-</section>
-<section id="źródła-danych-1" class="slide level2">
-<h2>Źródła danych</h2>
-<!--
-::: columns
-::: {.column .tabela_zrodla width="33%" style="font-size:60%;"}
--   Podstawowym zastosowaniem metod cyfrowej klasyfikacji zdjęć satelitarnych są **mapy pokrycia terenu i użytkowania ziemi**
-
-</br>
-
--   Źródła pokrycia terenu i użytkowania ziemi pozwalają na wszelkie analizy krajobrazowe oraz monitoring zmian zachodzących na powierzchni terenu
-
-</br>
-
--   Porównanie dokładności źródeł pokrycia terenu i użytkowania ziemi może zostać wzięte pod uwagę przy wyborze najbardziej użytecznego zbioru danych na poziomie lokalnym
-:::
-
-::: {.column .wykres_60 style="font-size:65%;margin-left:50px!important;"}
-ESA CCI-LC ![](ryciny/metody/equi7grid2.png){fig-align="center"}
-:::
-:::
-
--->
+<div class="columns">
+<div class="column wstep_28 tabela_zrodla" style="font-size:56%;">
+<ul>
+<li>Za pomocą metryk krajobrazowych można opisać strukturę krajobrazu i określić zmiany zachodzące na jego obszarze</li>
+<li>Dotychczas nie zbadano kierunku zmian złożoności przestrzennej oraz przyczyn ich występowania dla obszarów leśnych w skali globalnej</li>
+</ul>
+<p><br></p>
+<h3 id="cel"><em>Cel:</em></h3>
+<ul>
+<li>Określenie zmian kompozycji i konfiguracji krajobrazu leśnego na świecie</li>
+<li>Identyfikacja oraz wyjaśnienie największych zmian na poziomie lokalnym</li>
+</ul>
+</div><div class="column wykres_69" style="font-size:60%;">
+<div class="columns">
+<div class="column wykres_57" style="font-size:70%;text-align:center!important;margin-top:50px;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ryciny/metody/equi7grid2.png"></p>
+</figure>
+</div>
+</div><div class="column wykres_41" style="font-size:70%;text-align:center!important;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ryciny/metody/reklasyfikacja_lesne.png"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="column full" style="font-size:18px;text-align:left!important; margin-left:40px; margin-top:-50px;">
+<div class="fragment fade-in" data-fragment-index="2">
+<ul>
+<li>Globalne dane pokrycia terenu <strong>ESA CCI-LC</strong> na lata 1992-2020</li>
+<li>Zbiór odsniesień współrzędnych <strong>Equi7 Grid</strong>, składający się z siedmiu siatek dla każdego kontynentu</li>
+<li>Reklasyfikacja danych rastrowych do 2 kategorii - <strong>obszarów leśnych</strong> oraz <strong>obszarów pozostałych</strong></li>
+<li>Podział na siatkę ok. 160 tys. lokalnych krajobrazów, każdy o boku 30x30 km</li>
+<li>Obliczenie zmian złożoności przestrzennej dla każdego krajobrazu za pomocą <strong>metryk krajobrazowych</strong></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="metryki-krajobrazowe" class="slide level2">
 <h2>Metryki krajobrazowe</h2>
-
+<div class="columns">
+<div class="column wykres_40" style="font-size:60%;text-align:left!important;">
+<ul>
+<li>Wśród pięciu metryk teorii informacji można wyróżnić <strong>entropię brzegową</strong> i <strong>względną informację wzajemną</strong></li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Entropia brzegowa</strong> określa różnorodność (kompozycję) struktury przestrzennej krajobrazu</li>
+</ul>
+<p><br></p>
+<ul>
+<li><strong>Względna informacja wzajemna</strong> informuje o jednolitości (zbitości, konfiguracji) krajobrazu</li>
+</ul>
+<p><br></p>
+<ul>
+<li>Metryki te są nieskorelowane i niezależne od określonej kategorii pokrycia terenu.</li>
+</ul>
+</div><div class="column wykres_60" style="font-size:70%;text-align:center!important;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ryciny/metody/metryki2.png"></p>
+</figure>
+</div>
+</div>
+</div>
 <!--
-Metryki krajobrazowe ![](ryciny/metody/equi7grid2.png){fig-align="center"}
+## Reklasyfikacja
+:::: {.columns}
+
+::: {.column  style="font-size:70%;text-align:left!important;"}
+
+- aaa
+- aaa
+- aaa
+
+:::
 
 
+::: {.column  style="font-size:70%;text-align:center!important;"}
 
-```{=html}
+ ![](ryciny/metody/reklasyfikacja_lesne.png){fig-align="center" height="560"}
+ 
+:::
+
+::::
+-->
+</section>
+<section id="globalne-zmiany-powierzchniowe" class="slide level2">
+<h2>Globalne zmiany powierzchniowe</h2>
+<div class="columns">
+<div class="column wykres_45" style="font-size:50%;text-align:center!important;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ryciny/zmiany_powierzchniowe/perc_continents_forest.png"></p>
+</figure>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
+<ul>
+<li>Największy procentowy spadek obszarów leśnych w Ameryce Południowej, sięgający ponad 2,5%</li>
+<li>Trend spadkowy z licznymi fluktuacjami występujący na całym świecie, a szczególnie w Oceanii</li>
+</ul>
+</div>
+</div><div class="column wykres_55" style="font-size:50%;text-align:center!important;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ryciny/zmiany_powierzchniowe/pow_continents_forest.png"></p>
+</figure>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<ul>
+<li>Długotrwały wzrost powierzchni obszarów leśnych w Afryce</li>
+<li>Największy spadek powierzchni dla analizowanych lat w Ameryce Południowej, wraz z jego apogeum w 2004 roku</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="entropia-brzegowa-2020" class="slide level2">
+<h2>Entropia brzegowa (2020)</h2>
+
+<img data-src="ryciny/zmiany_globalne/mapy/forest_ent_2020.png" class="r-stretch quarto-figure-center"></section>
+<section id="globalne-zmiany-entropii-brzegowej" class="slide level2">
+<h2>Globalne zmiany entropii brzegowej</h2>
+<div class="columns">
+<div class="column wykres_55" style="font-size:50%;text-align:left!important;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ryciny/zmiany_globalne/wykresy/ent_changes_forest.png"></p>
+</figure>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
+<ul>
+<li>Znaczący wzrost różnorodności krajobrazu na obszarze Ameryki Południowej do roku 2004</li>
+<li>Zauważalny trend wzrostowy entropii brzegowej dla każdego z kontynentów w ciągu kilku ostatnich lat</li>
+</ul>
+</div>
+</div><div class="column wykres_45" style="font-size:50%;text-align:center!important;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ryciny/zmiany_globalne/wykresy/ent_continents_forest.png"></p>
+</figure>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<ul>
+<li>Znacząca przewaga obszarów ze wzrostem entropii brzegowej nad obszarami z jej spadkiem dla każdego kontynentu</li>
+<li>Wzrost różnorodności krajobrazu na niemal 70% powierzchni Europy</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="globalne-zmiany-entropii-brzegowej-1992-2020" class="slide level2">
+<h2>Globalne zmiany entropii brzegowej (1992-2020)</h2>
+
+<img data-src="ryciny/zmiany_globalne/mapy/ent_change_forest.png" class="r-stretch quarto-figure-center"></section>
+<section id="lokalne-zmiany-entropii-brzegowej-1992-2020" class="slide level2">
+<h2>Lokalne zmiany entropii brzegowej (1992-2020)</h2>
+<div class="columns">
+<div class="column" style="font-size:80%;text-align:center!important;">
+<p>Największy spadek - Sudan Południowy <img data-src="ryciny/zmiany_lokalne/ent_decrease_forest.png" data-fig-align="center"></p>
+</div><div class="column" style="font-size:80%;text-align:center!important;">
+<p>Największy wzrost - Brazylia <img data-src="ryciny/zmiany_lokalne/ent_increase_forest.png" data-fig-align="center"></p>
+</div>
+</div>
+</section>
+<section id="względna-informacja-wzajemna-2020" class="slide level2">
+<h2>Względna informacja wzajemna (2020)</h2>
+
+<img data-src="ryciny/zmiany_globalne/mapy/forest_relmutinf_2020.png" class="r-stretch quarto-figure-center"></section>
+<section id="globalne-zmiany-względnej-informacji-wzajemnej" class="slide level2">
+<h2>Globalne zmiany względnej informacji wzajemnej</h2>
+<div class="columns">
+<div class="column" style="font-size:60%;text-align:left!important;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ryciny/zmiany_globalne/wykresy/rmi_changes_forest.png"></p>
+</figure>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
+<ul>
+<li></li>
+<li></li>
+</ul>
+</div>
+</div><div class="column" style="font-size:60%;text-align:left!important;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ryciny/zmiany_globalne/wykresy/rmi_continents_forest.png"></p>
+</figure>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<ul>
+<li></li>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="globalne-zmiany-względnej-informacji-wzajemnej-1992-2020" class="slide level2">
+<h2>Globalne zmiany względnej informacji wzajemnej (1992-2020)</h2>
+
+<img data-src="ryciny/zmiany_globalne/mapy/rmi_change_forest.png" class="r-stretch quarto-figure-center"></section>
+<section id="lokalne-zmiany-względnej-informacji-wzajemnej-1992-2020" class="slide level2">
+<h2>Lokalne zmiany względnej informacji wzajemnej (1992-2020)</h2>
+<div class="columns">
+<div class="column" style="font-size:80%;text-align:center!important;">
+<p>Największy spadek względnej informacji wzajemnej <img data-src="ryciny/zmiany_lokalne/rmi_decrease_forest.png" data-fig-align="center"></p>
+</div><div class="column" style="font-size:80%;text-align:center!important;">
+<p>Największy wzrost względnej informacji wzajemnej <img data-src="ryciny/zmiany_lokalne/rmi_increase_forest.png" data-fig-align="center"></p>
+</div>
+</div>
+</section>
+<section id="zmiana-obu-metryk-1992-2020" class="slide level2">
+<h2>Zmiana obu metryk (1992-2020)</h2>
+
+<img data-src="ryciny/zmiany_globalne/mapy/bivariate_forest.png" class="r-stretch quarto-figure-center"></section>
+<section id="powiązanie-zmian-ze-zmiennymi-społeczno-ekonomicznymi" class="slide level2">
+<h2>Powiązanie zmian ze zmiennymi społeczno-ekonomicznymi</h2>
+<div class="columns">
+<div class="column wykres_40" style="font-size:60%;text-align:left!important;">
+<ul>
+<li>Stan demokracji oraz życia publicznego może wpływać na różne decyzje polityczne z zakresu gospodarowania obszarami leśnymi</li>
+</ul>
+<p><br></p>
+<ul>
+<li>dla uzyskanych wyników obliczono korelację z dwoma zmiennymi: <strong>wskaźnikiem demokracji</strong> oraz <strong>PKB per capita wg. PSN</strong></li>
+</ul>
+<p><br></p>
+<ul>
+<li>Wyodrębniono podział obszarów na państwa demokratyczne i niedemokratyczne oraz regiony bogate, średnio zamożne i biedne</li>
+</ul>
+</div><div class="column wykres_60" style="font-size:70%;text-align:center!important;margin-top:-20px;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ryciny/metody/reg_map2.png" height="640"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="powiązanie-zmian-ze-zmiennymi-społeczno-ekonomicznymi-1" class="slide level2">
+<h2>Powiązanie zmian ze zmiennymi społeczno-ekonomicznymi</h2>
+<div class="quarto-layout-panel" style="text-align:center;">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p>Entropia brzegowa</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ryciny/korelacja/forest_ent_mean.png" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
 <!--
-## Metryki krajobrazowe
+:::: {.columns}
 
+::: {.column style="font-size:70%;text-align:left!important;margin-top:-80px"}
+- aaa
+- aaa
 
-
-## Reklasyfikacja danych
-
-![](ryciny/wykresy/klasyfikacja.png){fig-align="center"}
-
-## Dane po reklasyfikacji
-
-::: columns
-::: {.column .mapy_reclass width="40%" style="font-size:60%;"}
-BDOT10k ![](ryciny/mapy/BDOT_2.png){fig-align="center"}
 :::
 
-::: {.column .legenda_reclass width="20%" style="font-size:60%;"}
-![](ryciny/mapy/legenda.png){fig-align="center"}
+::: {.column style="font-size:70%;text-align:left!important;margin-top:-80px"}
+
+- aaa
+- aaa
+
 :::
 
-::: {.column .mapy_reclass width="40%" style="font-size:60%;"}
-::: {.fragment .absolute .fade-in-then-out fragment-index="1"}
-CORINE Land Cover ![](ryciny/mapy/CLC_2.png){fig-align="center"}
+::::
+
+-->
+</section>
+<section id="powiązanie-zmian-ze-zmiennymi-społeczno-ekonomicznymi-2" class="slide level2">
+<h2>Powiązanie zmian ze zmiennymi społeczno-ekonomicznymi</h2>
+<div class="quarto-layout-panel" style="text-align:center;">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p>Względna informacja wzajemna</p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="cell quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="ryciny/korelacja/forest_rmi_mean.png" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--
+:::: {.columns}
+
+::: {.column style="font-size:70%;text-align:left!important;margin-top:-80px"}
+- aaa
+- aaa
+
 :::
 
-::: {.fragment .absolute .fade-in-then-out fragment-index="2"}
-ESA World Cover ![](ryciny/mapy/ESA_2.png){fig-align="center"}
+::: {.column style="font-size:70%;text-align:left!important;margin-top:-80px"}
+
+- aaa
+- aaa
+
 :::
 
-::: {.fragment .absolute .fade-in-then-out fragment-index="3"}
-Esri Land Cover ![](ryciny/mapy/ESRI_2.png){fig-align="center"}
-:::
-
-::: {.fragment .absolute .fade-in-then-out fragment-index="4"}
-LUCAS ![](ryciny/mapy/LUCAS_2.png){fig-align="center"}
-:::
-
-::: {.fragment .absolute .fade-in-then-out fragment-index="5"}
-Sentinel-2 GLC ![](ryciny/mapy/SENTINEL_2.png){fig-align="center"}
-:::
-
-::: {.fragment .absolute .fade-in fragment-index="6"}
-Urban Atlas ![](ryciny/mapy/URBAN_ATLAS_2.png){fig-align="center"}
-:::
-:::
-:::
-
-## Wyniki - Procentowy udział klas po reklasyfikacji dla wszystkich źródeł danych
-
-::: columns
-::: {.column .legenda_reclass width="40%" style="font-size:45%;margin-top:20px"}
-::: {.fragment .fade-in fragment-index="2"}
--   Przeszacowanie zabudowy przez zbiór Esri (8% i 22%)
-:::
-
-</br>
-
-::: {.fragment .fade-in fragment-index="3"}
--   Najbardziej niedoszacowaną klasą zostały obszary trawiaste i krzewiaste w zbiorze Esri
-:::
-
-</br>
-
-::: {.fragment .fade-in fragment-index="4"}
--   Przeszacowanie obszarów leśnych przez zbiór ESA o 10% i 24%
-:::
-
-</br>
-
-::: {.fragment .fade-in fragment-index="5"}
--   Obszary podmokłe przeszacowane przez zbiór Sentinel-2 6-krotnie oraz 25-krotnie
-:::
-:::
-
-::: {.column .wykres_30 width="40%" style="font-size:70%;"}
-::: {.fragment .fade-in fragment-index="1"}
-Aglomeracja <iframe src="ryciny/wykresy_interaktywne/poprawne/udzial_proc_aglo.html" width="100%" height="550px"></iframe>
-:::
-:::
-
-::: {.column width="60%" style="font-size:70%;text-align:center!important;"}
-::: {.fragment .fade-in fragment-index="1"}
-miasto Poznań <iframe src="ryciny/wykresy_interaktywne/poprawne/udzial_proc_poznan.html" width="100%" height="550px"></iframe>
-:::
-:::
-:::
-
-## Wyniki - Zgodność z BDOT10k
-
-::: columns
-::: {.column width="50%" style="font-size:70%;text-align:center!important;"}
-Aglomeracja<iframe src="ryciny/wykresy_interaktywne/poprawne/zgodnosc_aglo.html" width="100%" height="260px"></iframe>
-
-miasto Poznań<iframe src="ryciny/wykresy_interaktywne/poprawne/zgodnosc_poznan.html" width="100%" height="260px"></iframe>
-:::
-
-::: {.column width="50%" style="font-size:70%;text-align:center!important;"}
-Zgodność źródeł danych z BDOT10k ![](ryciny/mapy/mapa_zgodnosc_2.png){fig-align="center"}
-:::
-:::
-
-## Wyniki - Dokładność oraz wskaźnik Kappa dla porównywanych źródeł
-
-<iframe class="iframe_table" src="ryciny/wykresy_interaktywne/poprawne/tabela_kappa.html" width="100%" height="800px" style="margin-top:50px!important;">
-
-</iframe>
-
-## Wyniki - Procentowy udział niepoprawnie zaklasyfikowanych klas
-
-::: columns
-::: {.column .wykres_40 width="40%" style="font-size:70%;text-align:center!important;"}
-Aglomeracja <iframe src="ryciny/wykresy_interaktywne/poprawne/error_aglo.html" width="100%" height="600px"></iframe>
-:::
-
-::: {.column .wykres_60 width="60%" style="margin-top:5px; font-size:70%;text-align:center!important;"}
-miasto Poznań <iframe src="ryciny/wykresy_interaktywne/poprawne/error_poznan.html" width="100%" height="600px"></iframe>
-:::
-:::
-
-## Wyniki - Wskaźniki dokładności klasyfikacji
-
-Aglomeracja <iframe id="iframe_table" src="ryciny/wykresy_interaktywne/poprawne/tabela_aglo.html" width="100%" height="250px"></iframe>
-
-miasto Poznań <iframe class="iframe_table" src="ryciny/wykresy_interaktywne/poprawne/tabela_poznan.html" width="100%" height="250px"></iframe>
-
-## Podsumowanie
-
-::: columns
-::: {.column style="font-size:60%;text-align:left!important;"}
-::: {.fragment .fade-in fragment-index="1"}
--   Większa zgodność oraz dokładność zbiorów i klas na obszarze aglomeracji
-:::
-
-::: {.fragment .fade-in fragment-index="2"}
--   Najdokładniejszym źródłem na terenie miasta okazał się Urban Atlas, na obszarze aglomeracji natomiast - LUCAS
-:::
-
-::: {.fragment .fade-in fragment-index="3"}
--   Na obu obszarach najmniej dokładną klasą zostały tereny podmokłe
-:::
-
-::: {.fragment .fade-in fragment-index="4"}
--   Najdokładniejszą klasą zostały obszary wodne, następnie pola uprawne i lasy
-:::
-
-::: {.fragment .fade-in fragment-index="5"}
--   Uzyskana dokładność jest zależna od sposobu reklasyfikacji oraz rozdzielczości i przeznaczenia zbioru danych
-:::
-
-::: {.fragment .fade-in fragment-index="6"}
--   Istnieje zdecydowana zależność pomiędzy zgodnością i dokładnością klas a konfiguracją i kompozycją krajobrazu
-:::
-:::
-
-::: {.column style="font-size:80%;text-align:left!important;"}
-**Autorzy:** Adrian Nowacki, Filip Ratajszczak, Igor Graczykowski, Radosław Jagła
-
-###### Materiały
-
-**Projekt:** [sekcja-geoinformacji-uam.github.io/LULC_stat](https://sekcja-geoinformacji-uam.github.io/LULC_stat/)
-
-**Prezentacja:** [adrian-nowacki.github.io/oksgt2023](https://adrian-nowacki.github.io/oksgt2023/)
-
-###### Kontakt
-
-sekcja.geoinformacji.skng\@gmail.com
-
-</br>
-
-::: columns
-::: {.column .wykres_48 style="font-size:60%;text-align:center!important;"}
-<a href="https://www.instagram.com/sekcja_geoinformacji_uam/"> <img src="ryciny/ikony/instagram.png" alt="Instagram" width="40px"/> </a>
-
-[/sekcja_geoinformacji_uam](https://www.instagram.com/sekcja_geoinformacji_uam/)
-
-</br>
-
-<a href="https://github.com/sekcja-geoinformacji-uam/"> <img src="ryciny/ikony/github.png" alt="Github" width="40px"/> </a>
-
-[/sekcja-geoinformacji-uam](https://github.com/sekcja-geoinformacji-uam/)
-:::
-
-::: {.column .wykres_48 style="font-size:60%;text-align:center!important;"}
-<a href="https://www.facebook.com/SekcjaGeoinformacjiUam/"> <img src="ryciny/ikony/fb.png" alt="Facebook" width="40px"/> </a>
-
-[/SekcjaGeoinformacjiUam](https://www.facebook.com/SekcjaGeoinformacjiUam/)
-
-</br>
-
-<a href="https://sekcjageoinformacji.amu.edu.pl/"> <img src="ryciny/ikony/web.png" alt="Web" width="40px"/> </a>
-
-[/sekcjageoinformacji.amu.edu.pl](https://sekcjageoinformacji.amu.edu.pl/)
-:::
-:::
-:::
-:::
-
-```
+::::
 
 
 -->
+</section>
+<section id="podsumowanie" class="slide level2">
+<h2>Podsumowanie</h2>
+<div class="columns">
+<div class="column" style="font-size:60%;text-align:left!important;">
+<div class="fragment fade-in" data-fragment-index="1">
+<ul>
+<li></li>
+</ul>
+</div>
+<div class="fragment fade-in" data-fragment-index="2">
+<ul>
+<li></li>
+</ul>
+</div>
+<div class="fragment fade-in" data-fragment-index="3">
+<ul>
+<li></li>
+</ul>
+</div>
+<div class="fragment fade-in" data-fragment-index="4">
+<ul>
+<li></li>
+</ul>
+</div>
+<div class="fragment fade-in" data-fragment-index="5">
+<ul>
+<li></li>
+</ul>
+</div>
+<div class="fragment fade-in" data-fragment-index="6">
+<ul>
+<li></li>
+</ul>
+</div>
+</div><div class="column" style="font-size:80%;text-align:left!important;">
+<p><strong>Autorzy:</strong> Adrian Nowacki, Jakub Nowosad</p>
+<h6 id="materiały">Materiały</h6>
+<p><strong>Raport:</strong> <a href="adrian-nowacki.github.io/zmiany_zlozonosci_przestrzennej/">adrian-nowacki.github.io/zmiany_zlozonosci_przestrzennej/</a></p>
+<p><strong>Prezentacja:</strong> <a href="https://adrian-nowacki.github.io/envilink2024">adrian-nowacki.github.io/envilink2024</a></p>
+<p><br></p>
+<p><strong>Oprogramowanie:</strong> Język R, <a href="https://jakubnowosad.com/motif/">pakiet motif</a></p>
+<p><strong>Literatura:</strong></p>
+<p><a href="https://link.springer.com/article/10.1007/s10980-020-01135-0">Motif: an open-source R tool for pattern-based spatial analysis</a></p>
+<p><a href="https://link.springer.com/article/10.1007/s10980-019-00830-x#Sec2">Information theory as a consistent framework for quantification and classification of landscape patterns</a></p>
+<p><br></p>
+<h6 id="kontakt">Kontakt</h6>
+<p>adriannowacki007@gmail.com</p>
+<p><br></p>
+</div>
+</div>
 <div class="footer footer-default">
 <p><a href="https://adrian-nowacki.github.io/envilink2024/" class="uri">https://adrian-nowacki.github.io/envilink2024/</a></p>
 </div>
@@ -838,6 +938,44 @@ sekcja.geoinformacji.skng\@gmail.com
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

@@ -31,10 +31,13 @@
     font-size:120%!important;
 }
 .slide-background-content {
- background-color:#eff6f1;
+ background-color:#ffffff;
 }
 
+.column {
 
+    font-weight:100!important;
+}
 
 
 h2, h3 {
@@ -42,6 +45,7 @@ h2, h3 {
     color: #ffffff!important;
     font-size:100%!important; 
     padding: 10px;
+    margin-top:-20px!important;
   }
 
 p {
@@ -68,6 +72,15 @@ p {
     width:60%!important;
     text-align:center!important;
 }
+
+.wstep_28 {
+    width:28%!important;
+
+}
+.wykres_69 {
+    width:72%!important;
+    text-align:center!important;
+}
 .wykres_30{
     width:30%!important;
     text-align:center!important;
@@ -76,6 +89,28 @@ p {
     width:48%!important;
     text-align:center!important;
 }
+.full{
+    width:100%!important;
+    text-align:left!important;
+}
+.wykres_45{
+    width:45%!important;
+    text-align:center!important;
+}
+
+.wykres_55{
+    width:55%!important;
+    text-align:center!important;
+}
+
+.wykres_57{
+    width:57%!important;
+}
+.wykres_41{
+    width:41%!important;
+}
+
+
 a{
     text-align:center!important;
     color:#365c5f!important;
